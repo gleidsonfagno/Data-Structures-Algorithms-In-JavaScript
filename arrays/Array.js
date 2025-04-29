@@ -3,8 +3,20 @@ class MyArray {
         this.lenght = 0
         this.data = {}
     }
+
+    push(iten){
+        this.data[this.lenght] = iten
+        // console.log("-------", this.data[this.lenght])
+        this.lenght++
+        return this.lenght
+    }
 }
 
-const MyNewArray = new MyArray()
+const myNewArray = new MyArray()
 
-console.log(MyNewArray)
+myNewArray.push("apple")
+myNewArray.push("orange")
+myNewArray.push("mango")
+myNewArray.push("banana")
+
+console.log(myNewArray)
