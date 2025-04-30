@@ -10,6 +10,10 @@ class MyArray {
         this.lenght++
         return this.lenght
     }
+
+    get(index){
+        return this.data[index]
+    }
 }
 
 const myNewArray = new MyArray()
@@ -20,3 +24,6 @@ myNewArray.push("mango")
 myNewArray.push("banana")
 
 console.log(myNewArray)
+
+console.log(myNewArray.get(0))
+
