@@ -14,6 +14,15 @@ class MyArray {
     get(index){
         return this.data[index]
     }
+
+    pop(){
+        const lastItem = this.data[this.lenght -1]
+        console.log("----------->", lastItem)
+        this.lenght--
+        return lastItem
+    }
+
+
 }
 
 const myNewArray = new MyArray()
@@ -27,3 +36,5 @@ console.log(myNewArray)
 
 console.log(myNewArray.get(0))
 
+myNewArray.pop()
+console.log(myNewArray)
