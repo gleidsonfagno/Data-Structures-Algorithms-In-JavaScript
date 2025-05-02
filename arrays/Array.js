@@ -22,6 +22,17 @@ class MyArray {
         return lastItem
     }
 
+    shift(){
+        const firstItem = this.data[0]
+        
+        for (let i = 0; i < this.lenght; i++) {
+            this.data[i] = this.data[i + 1]
+        }
+
+        delete this.data[this.lenght - 1];
+        this.lenght--
+        return firstItem
+    }
 
 }
 
@@ -36,5 +47,8 @@ console.log(myNewArray)
 
 console.log(myNewArray.get(0))
 
-myNewArray.pop()
+// myNewArray.pop()
+// myNewArray.shift()
+console.log(myNewArray)
+console.log(myNewArray.shift())
 console.log(myNewArray)
