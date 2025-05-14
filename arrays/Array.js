@@ -34,6 +34,18 @@ class MyArray {
         return firstItem
     }
 
+    delete(index) {
+        const item = this.data[index]
+
+        for (let i = index; i < this.lenght - 1; i++){
+            this.data[i] = this.data[i + 1]
+        }
+
+        delete this.data[this.lenght - 1]
+        this.lenght--
+        return item
+    }
+
 }
 
 const myNewArray = new MyArray()
@@ -44,11 +56,10 @@ myNewArray.push("mango")
 myNewArray.push("banana")
 
 console.log(myNewArray)
-
 console.log(myNewArray.get(0))
 
 // myNewArray.pop()
-// myNewArray.shift()
-console.log(myNewArray)
-console.log(myNewArray.shift())
+// console.log(myNewArray)
+// console.log(myNewArray.shift())
+console.log(myNewArray.delete(1))
 console.log(myNewArray)
