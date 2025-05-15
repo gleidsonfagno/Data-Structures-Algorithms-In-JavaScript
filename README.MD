@@ -33,3 +33,51 @@
     </tr>
   </tbody>
 </table>
+
+## What is Linked List
+
+``Uma lista encadeada é uma estrutura de dados linear onde cada elemento (chamado de nó) aponta para o próximo, formando uma sequência. É muito usada quando precisamos inserir ou remover elementos com frequência e eficiência.``
+
+Estrutura de um Nó:
+Cada nó contém duas partes:
+
+Dado – o valor armazenado.
+
+Próximo – uma referência (ou ponteiro) para o próximo nó.
+
+[ dado | próximo ] → [ dado | próximo ] → [ dado | próximo ] → None
+
+
+- **1 Single LinkedList**
+
+      a. Push (Challenge)
+
+      b. Pop (Chellenge)
+
+      c. Unshuft (Chellenge)
+
+      d. Shift (Chellenge)
+
+      e. GetFist (Chellenge)
+
+      f. GetLast (Chellenge)
+
+      g. Set (Chellenge)
+      
+      h. Insert (Chellenge)
+
+      i. Size (Chellenge)
+
+      j. Clear (Chellenge)
+
+- **2  Doubly LinkedList**
+
+      a. Push  (Chellenge)
+
+      b. Pop (Chellenge)
+
+      c. Unshift (Chellenge)
+
+      d. Shift (Chellenge)
+
+-  **3 Reverse LinkedList**
