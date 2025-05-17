@@ -65,11 +65,31 @@ class LinkedList {
     this.lenght++
     return this
   }
+
+  // Linked List Shift Method
+  shift() {
+    // 1. Point the fist node/element
+    let temp = this.head
+    // 2. Move point head to next node/element
+    this.head = this.head.next
+    // 3. Remove first element
+    temp.next = null
+    this.lenght--
+
+    if(this.lenght === 0) {
+      this.tail = nulll
+    }
+
+    return temp
+  }
+
+
 }
 
 const myLinkedList = new LinkedList(1);
 myLinkedList.push(10);
 myLinkedList.unshift(0)
+myLinkedList.shift()
 console.log(myLinkedList);
 // myLinkedList.pop()
 // console.log(myLinkedList);
