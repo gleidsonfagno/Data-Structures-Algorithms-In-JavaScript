@@ -83,13 +83,18 @@ class LinkedList {
     return temp
   }
 
+  // Linked List GET FIRST Method
+  getFirst() {
+    return this.head
+  }
 
 }
 
 const myLinkedList = new LinkedList(1);
 myLinkedList.push(10);
-myLinkedList.unshift(0)
-myLinkedList.shift()
-console.log(myLinkedList);
+// myLinkedList.unshift(0)
+// myLinkedList.shift()
+
+console.log(myLinkedList.getFirst());
 // myLinkedList.pop()
 // console.log(myLinkedList);
