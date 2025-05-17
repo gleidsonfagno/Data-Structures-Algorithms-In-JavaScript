@@ -49,10 +49,27 @@ class LinkedList {
     }
     return temp
   }
+
+  // Linked List Unshift Method
+  unshift(value) {
+    const newNode = new Node(value)
+
+    if(!this.head) {
+      this.head = newNode
+      this.tail = newNode
+    }
+
+    newNode.next = this.head
+    this.head = newNode
+
+    this.lenght++
+    return this
+  }
 }
 
 const myLinkedList = new LinkedList(1);
 myLinkedList.push(10);
+myLinkedList.unshift(0)
 console.log(myLinkedList);
-myLinkedList.pop()
-console.log(myLinkedList);
+// myLinkedList.pop()
+// console.log(myLinkedList);
