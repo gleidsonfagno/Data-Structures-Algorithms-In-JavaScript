@@ -106,14 +106,48 @@ class LinkedList {
 
   }
   
+  // Linked List GET Method
+  get(index) {
+     let counter = 0
+     let temp = this.head
+
+     while (temp) {
+      if (counter === index) {
+        return temp
+      }
+
+      counter++
+      temp = temp.next
+     }
+
+     return null
+  }
 }
 
-const myLinkedList = new LinkedList(1);
-myLinkedList.push(10);
-// myLinkedList.unshift(0)
-// myLinkedList.shift()
+const myLinkedList = new LinkedList(0);
 
-console.log(myLinkedList.getFirst());
-console.log(myLinkedList.getLast());
-// myLinkedList.pop()
-// console.log(myLinkedList);
+// Adiciona elementos ao final da lista
+myLinkedList.push(1);
+myLinkedList.push(2);
+myLinkedList.push(3);
+// Lista agora: 0 → 1 → 2 → 3
+
+console.log("------Primeiro elemento da lista------\n");
+console.log(myLinkedList.getFirst()); 
+// getFirst() retorna o primeiro elemento da lista (head)
+
+console.log("------Último elemento da lista------\n");
+console.log(myLinkedList.getLast());  
+// getLast() retorna o último elemento da lista (tail)
+
+console.log("------Elemento na posição 3------\n");
+console.log(myLinkedList.get(3));     
+// get(index) retorna o nó na posição indicada (começando do 0)
+
+console.log("------Removendo o último elemento com pop()------\n");
+myLinkedList.pop(); 
+// pop() remove o último elemento da lista
+// Lista agora: 0 → 1 → 2
+
+console.log("------Lista final após pop()------\n");
+console.log(myLinkedList);
