@@ -122,6 +122,17 @@ class LinkedList {
 
      return null
   }
+
+  set(index, value) {
+    let temp = this.get(index)
+
+    if(temp) {
+      temp.value = value
+      return true
+    }
+
+    return false
+  }
 }
 
 const myLinkedList = new LinkedList(0);
@@ -130,24 +141,18 @@ const myLinkedList = new LinkedList(0);
 myLinkedList.push(1);
 myLinkedList.push(2);
 myLinkedList.push(3);
-// Lista agora: 0 → 1 → 2 → 3
 
-console.log("------Primeiro elemento da lista------\n");
-console.log(myLinkedList.getFirst()); 
-// getFirst() retorna o primeiro elemento da lista (head)
+console.log(myLinkedList.getFirst())
+// retorna o primeiro elemento da lista (head)
 
-console.log("------Último elemento da lista------\n");
 console.log(myLinkedList.getLast());  
-// getLast() retorna o último elemento da lista (tail)
+// retorna o último elemento da lista (tail)
 
-console.log("------Elemento na posição 3------\n");
 console.log(myLinkedList.get(3));     
-// get(index) retorna o nó na posição indicada (começando do 0)
+//retorna o nó na posição indicada (começando do 0)
 
-console.log("------Removendo o último elemento com pop()------\n");
-myLinkedList.pop(); 
-// pop() remove o último elemento da lista
-// Lista agora: 0 → 1 → 2
+myLinkedList.pop() 
+// remove o último elemento da lista
 
-console.log("------Lista final após pop()------\n");
-console.log(myLinkedList);
+console.log(myLinkedList.set(1, 10))
+console.log(myLinkedList)
