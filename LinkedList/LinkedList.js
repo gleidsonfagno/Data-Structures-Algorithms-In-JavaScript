@@ -122,7 +122,7 @@ class LinkedList {
 
      return null
   }
-
+  // Linked List SET Method
   set(index, value) {
     let temp = this.get(index)
 
@@ -133,6 +133,30 @@ class LinkedList {
 
     return false
   }
+
+  // Linked List INSERT Method
+  insert(index, value) {
+    if (index === 0) {
+      return this.unshift(value)
+    }
+
+    if (index === this.lenght) {
+      return this.push(value)
+    }
+
+    const newNode = new Node(value)
+    // Uses the get method to find the node right before the node right before the desired possition (index - 1).
+
+    const temp = this.get(index -1) 
+    newNode.next = temp.next
+
+    temp.next = newNode
+    this.lenght++
+    return true
+
+  }
+
+
 }
 
 const myLinkedList = new LinkedList(0);
@@ -154,5 +178,6 @@ console.log(myLinkedList.get(3));
 myLinkedList.pop() 
 // remove o último elemento da lista
 
-console.log(myLinkedList.set(1, 10))
+console.log(myLinkedList.set(3, 10))
+console.log(myLinkedList.insert(0, 20))
 console.log(myLinkedList)
