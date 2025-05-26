@@ -156,7 +156,18 @@ class LinkedList {
 
   }
 
+  // Linked List Size Method
+  size(){
+    let counter = 0
+    let temp = this.head
 
+    while (temp) {
+      counter++
+      temp = temp.next
+    }
+
+    return counter
+  }
 }
 
 const myLinkedList = new LinkedList(0);
@@ -180,4 +191,4 @@ myLinkedList.pop()
 
 console.log(myLinkedList.set(3, 10))
 console.log(myLinkedList.insert(0, 20))
-console.log(myLinkedList)
+console.log(myLinkedList.size())
