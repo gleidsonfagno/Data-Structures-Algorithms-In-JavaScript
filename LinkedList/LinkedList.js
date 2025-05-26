@@ -26,147 +26,148 @@ class LinkedList {
 
   // Linked List Pop Method
   pop() {
-
-    if(!this.head) {
-      return undefined
+    if (!this.head) {
+      return undefined;
     }
 
-    let temp = this.head
-    let prev = this.head
+    let temp = this.head;
+    let prev = this.head;
 
-    while(temp.next) {
-      prev = temp
-      temp = prev.next
+    while (temp.next) {
+      prev = temp;
+      temp = prev.next;
     }
 
-    this.tail = prev
-    this.tail.next = null
-    this.lenght--
+    this.tail = prev;
+    this.tail.next = null;
+    this.lenght--;
 
-    if(this.lenght === 0) {
-      this.head = null
-      this.tail = null
+    if (this.lenght === 0) {
+      this.head = null;
+      this.tail = null;
     }
-    return temp
+    return temp;
   }
 
   // Linked List Unshift Method
   unshift(value) {
-    const newNode = new Node(value)
+    const newNode = new Node(value);
 
-    if(!this.head) {
-      this.head = newNode
-      this.tail = newNode
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
     }
 
-    newNode.next = this.head
-    this.head = newNode
+    newNode.next = this.head;
+    this.head = newNode;
 
-    this.lenght++
-    return this
+    this.lenght++;
+    return this;
   }
 
   // Linked List Shift Method
   shift() {
     // 1. Point the fist node/element
-    let temp = this.head
+    let temp = this.head;
     // 2. Move point head to next node/element
-    this.head = this.head.next
+    this.head = this.head.next;
     // 3. Remove first element
-    temp.next = null
-    this.lenght--
+    temp.next = null;
+    this.lenght--;
 
-    if(this.lenght === 0) {
-      this.tail = nulll
+    if (this.lenght === 0) {
+      this.tail = nulll;
     }
 
-    return temp
+    return temp;
   }
 
   // Linked List GET FIRST Method
   getFirst() {
-    return this.head
+    return this.head;
   }
 
   // Linked List GET LAST Method
   getLast() {
-    if(!this.head) {
-      return null
+    if (!this.head) {
+      return null;
     }
 
-    let temp = this.head
+    let temp = this.head;
 
-    while (temp){
-      if(!temp.next) {
-        return temp
+    while (temp) {
+      if (!temp.next) {
+        return temp;
       }
 
-      temp = temp.next 
+      temp = temp.next;
     }
-
   }
-  
+
   // Linked List GET Method
   get(index) {
-     let counter = 0
-     let temp = this.head
+    let counter = 0;
+    let temp = this.head;
 
-     while (temp) {
+    while (temp) {
       if (counter === index) {
-        return temp
+        return temp;
       }
 
-      counter++
-      temp = temp.next
-     }
+      counter++;
+      temp = temp.next;
+    }
 
-     return null
+    return null;
   }
   // Linked List SET Method
   set(index, value) {
-    let temp = this.get(index)
+    let temp = this.get(index);
 
-    if(temp) {
-      temp.value = value
-      return true
+    if (temp) {
+      temp.value = value;
+      return true;
     }
 
-    return false
+    return false;
   }
 
   // Linked List INSERT Method
   insert(index, value) {
     if (index === 0) {
-      return this.unshift(value)
+      return this.unshift(value);
     }
 
     if (index === this.lenght) {
-      return this.push(value)
+      return this.push(value);
     }
 
-    const newNode = new Node(value)
+    const newNode = new Node(value);
     // Uses the get method to find the node right before the node right before the desired possition (index - 1).
 
-    const temp = this.get(index -1) 
-    newNode.next = temp.next
+    const temp = this.get(index - 1);
+    newNode.next = temp.next;
 
-    temp.next = newNode
-    this.lenght++
-    return true
-
+    temp.next = newNode;
+    this.lenght++;
+    return true;
   }
 
   // Linked List Size Method
-  size(){
-    let counter = 0
-    let temp = this.head
+  size() {
+    let counter = 0;
+    let temp = this.head;
 
     while (temp) {
-      counter++
-      temp = temp.next
+      counter++;
+      temp = temp.next;
     }
 
-    return counter
+    return counter;
+  }
+
+  clear() {
+    this.head = null
   }
 }
 
@@ -177,18 +178,19 @@ myLinkedList.push(1);
 myLinkedList.push(2);
 myLinkedList.push(3);
 
-console.log(myLinkedList.getFirst())
+console.log(myLinkedList.getFirst());
 // retorna o primeiro elemento da lista (head)
 
-console.log(myLinkedList.getLast());  
+console.log(myLinkedList.getLast());
 // retorna o último elemento da lista (tail)
 
-console.log(myLinkedList.get(3));     
+console.log(myLinkedList.get(3));
 //retorna o nó na posição indicada (começando do 0)
 
-myLinkedList.pop() 
+myLinkedList.pop();
 // remove o último elemento da lista
 
-console.log(myLinkedList.set(3, 10))
-console.log(myLinkedList.insert(0, 20))
-console.log(myLinkedList.size())
+console.log(myLinkedList.set(3, 10));
+console.log(myLinkedList.insert(0, 20));
+console.log(myLinkedList.size());
+console.log(myLinkedList.clear());
