@@ -39,7 +39,7 @@ class DoublyLinkedList {
         }
 
         let temp =  this.tail
-        if (!temp === 1) {
+        if (temp === 1) {
             this.head = null
             this.tail = null
         }
@@ -86,6 +86,23 @@ class DoublyLinkedList {
         this.lenght--
         return temp
     }
+    
+    // Reverse Linked List 
+    reverse() {
+        let temp = this.head // gurada o head em uma variavel temporaria
+        this.head = this.tail // apontamos o head para tail
+        this.tail = temp // apontamos a tail para o head que esta guardado na variavel temp
+
+        let next = temp
+        let prev  = null
+
+        for (let i = 0; i < this.lenght; i++) {
+            next = temp.next
+            temp.next = prev
+            prev = temp
+            temp = next
+        }
+    }
 }
 
 let myDoublyLinkedList = new DoublyLinkedList(0)
@@ -93,6 +110,10 @@ myDoublyLinkedList.push(1)
 myDoublyLinkedList.push(2)
 myDoublyLinkedList.push(3)
 myDoublyLinkedList.unshift(4)
-myDoublyLinkedList.shift()
 console.log(myDoublyLinkedList)
+myDoublyLinkedList.shift()
 console.log(myDoublyLinkedList.pop())
+
+
+myDoublyLinkedList.reverse()
+console.log(myDoublyLinkedList)
