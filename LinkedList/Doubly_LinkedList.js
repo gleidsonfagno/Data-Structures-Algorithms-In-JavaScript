@@ -50,11 +50,28 @@ class DoublyLinkedList {
         this.lenght--
         return temp
     }
-    
+
+    // Doubly Linked List Unshift Method
+    unshift(value) {
+        const newNode = new Node(value)
+
+        if (this.lenght === 0) {
+            this.head = newNode
+            this.tail = newNode
+        }
+
+        newNode.next = this.head
+        this.head.prev = newNode
+        this.head = newNode
+        this.lenght++
+        return this
+    }
 }
 
 let myDoublyLinkedList = new DoublyLinkedList(0)
 myDoublyLinkedList.push(1)
 myDoublyLinkedList.push(2)
 myDoublyLinkedList.push(3)
+myDoublyLinkedList.unshift(100)
+console.log(myDoublyLinkedList)
 console.log(myDoublyLinkedList.pop())
