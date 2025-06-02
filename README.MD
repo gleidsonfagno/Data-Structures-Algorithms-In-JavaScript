@@ -72,6 +72,12 @@ Próximo – uma referência (ou ponteiro) para o próximo nó.
 
 - **2  Doubly LinkedList**
 
+[ dado | prev | next ] <-> [ dado | prev | next ] <-> [ dado | prev | next ] -> None
+
+**``dado (data)
+próximo (next) → aponta para o próximo nó
+anterior (prev) → aponta para o nó anterior``**
+
       a. Push  (Chellenge)
 
       b. Pop (Chellenge)
@@ -81,3 +87,47 @@ Próximo – uma referência (ou ponteiro) para o próximo nó.
       d. Shift (Chellenge)
 
 -  **3 Reverse LinkedList**
+
+## Stack & Queues
+
+- 1. Stack
+
+a. push(chellenge)
+
+b. pop()
+
+c. top()
+
+- 2 Queue
+
+ a. enqueue (Chellenge) 
+ b. dequeue()
+
+- 3. Intervi Questions
+
+a. Min Stack
+
+b. Valid Parenthesis
+
+c. Reverse String Using Stack
+
+### O que é Stack? (Pilha)
+
+Definição:
+Stack (Pilha) é uma estrutura de dados onde o último elemento que entra é o primeiro que sai — isso é chamado de LIFO (Last In, First Out).
+
+Exemplo prático:
+
+Empilhar pratos: o último prato colocado é o primeiro que você pega.
+
+Operações principais:
+
+push(elemento): adiciona um elemento ao topo.
+
+pop(): remove o elemento do topo.
+
+peek() ou top(): vê qual é o elemento no topo, sem remover.
+
+Uso no mundo real:
+✅ Função "desfazer" em editores de texto.
+✅ Pilha de chamadas (call stack) em linguagens de programação.
