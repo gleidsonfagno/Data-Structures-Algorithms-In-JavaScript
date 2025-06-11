@@ -41,10 +41,30 @@ class Stack {
     return temp;
   }
 
+  main() {
+    if (this.length === 0) {
+       return undefined
+    }
+
+    let current = this.first
+    let minValue = current.value
+
+    while  (current.next) {
+      current = current.next
+
+      if (current.value < minValue) {
+        console.log(current.value, minValue)
+        minValue = current.value
+      }
+    }
+    return minValue
+  }
+
 }
 
 let theStack = new Stack(0);
 theStack.push(1);
 theStack.push(2);
-theStack.pop();
-console.log(theStack);
+theStack.push(3);
+// theStack.pop();
+console.log(theStack.main());
