@@ -17,12 +17,26 @@ class HashTable {
 
   set(key, value) {
     const index = this._hashFunctio(key);
-    if(!this.keyMap[index]) this.keyMap[index] = [];
-    this.keyMap[index].push([key, value])
+    if (!this.keyMap[index]) this.keyMap[index] = [];
+    this.keyMap[index].push([key, value]);
     return this;
+  }
+
+  get(key) {
+    const index = this._hashFunctio(key);
+
+    if (this.keyMap[index]) {
+      for (let i = 0; i < this.keyMap[index].length; i++) {
+        if (this.keyMap[index][i][0] === key) {
+            return this.keyMap[index][i][1]
+        }
+      }
+    }
+
+    return undefined;
   }
 }
 
 const phoneBook = new HashTable();
-
-console.log(phoneBook.set("Jhon", "333-444-222"))
+phoneBook.set("Jhon", "333-444-222")
+console.log(phoneBook.get("Jhon"))
