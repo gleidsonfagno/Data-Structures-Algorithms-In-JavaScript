@@ -131,3 +131,37 @@ peek() ou top(): vê qual é o elemento no topo, sem remover.
 Uso no mundo real:
 ✅ Função "desfazer" em editores de texto.
 ✅ Pilha de chamadas (call stack) em linguagens de programação.
+
+## Hash Tables
+
+Data  Structure  use to  Stoore ``keu-value`` pairs.
+
+Javascript -> Objects
+Python -> Dictionarries
+Go -> Maps
+
+###  Uma Hash Table:
+
+Armazena pares chave → valor
+
+Usa uma função chamada hash para transformar uma chave em um índice
+
+Permite buscas muito rápidas (complexidade O(1), idealmente)
+
+```javascript
+const hashTable = {
+  nome: "Gleidson",
+  idade: 25,
+  cidade: "Belém"
+};
+
+console.log(hashTable["nome"]); // "Gleidson"
+```
+### O que é uma Hash Function?
+Uma função hash:
+
+É uma função que recebe uma chave (por exemplo, uma string como "nome")
+
+E retorna um índice numérico fixo, que indica onde armazenar esse valor no array interno da Hash Table.
+
+Ela é o coração da estrutura, pois define onde os dados serão guardados na memória.
