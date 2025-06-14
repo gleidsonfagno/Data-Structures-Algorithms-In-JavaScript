@@ -28,15 +28,31 @@ class HashTable {
     if (this.keyMap[index]) {
       for (let i = 0; i < this.keyMap[index].length; i++) {
         if (this.keyMap[index][i][0] === key) {
-            return this.keyMap[index][i][1]
+          return this.keyMap[index][i][1];
         }
       }
     }
 
     return undefined;
   }
+
+  getAllKeys() {
+    const keys = [];
+    for (let i = 0; i < this.keyMap.length; i++) {
+      if (this.keyMap[i]) {
+        for (let j = 0; j < this.keyMap[i].length; j++) {
+          keys.push(this.keyMap[i][j][0]);
+        }
+      }
+    }
+
+    return keys;
+  }
 }
 
 const phoneBook = new HashTable();
-phoneBook.set("Jhon", "333-444-222")
-console.log(phoneBook.get("Jhon"))
+phoneBook.set("jhon", "333-444-222");
+phoneBook.set("jordan", "111-222-333");
+phoneBook.set("michel", "666-444-999");
+// console.log(phoneBook.get("jhon"));
+console.log(phoneBook.getAllKeys());

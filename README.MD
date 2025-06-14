@@ -136,9 +136,9 @@ Uso no mundo real:
 
 Data  Structure  use to  Stoore ``keu-value`` pairs.
 
-Javascript -> Objects
-Python -> Dictionarries
-Go -> Maps
+Javascript -> Objects;
+Python -> Dictionarries;
+Go -> Maps;
 
 ###  Uma Hash Table:
 
