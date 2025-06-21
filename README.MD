@@ -45,7 +45,12 @@ Dado – o valor armazenado.
 
 Próximo – uma referência (ou ponteiro) para o próximo nó.
 
-[ dado | próximo ] → [ dado | próximo ] → [ dado | próximo ] → None
+```marckdow
+ [ dado | próximo ] → [ dado | próximo ] → [ dado | próximo ] → None
+```
+
+10 → 5 → 3 → 7 → 15 → 20 → null
+
 
 
 - **1 Single LinkedList**
@@ -72,7 +77,11 @@ Próximo – uma referência (ou ponteiro) para o próximo nó.
 
 - **2  Doubly LinkedList**
 
+```csharp
+null ← 10 ⇄ 5 ⇄ 3 ⇄ 7 ⇄ 15 ⇄ 20 → null
+```
 [ dado | prev | next ] <-> [ dado | prev | next ] <-> [ dado | prev | next ] -> None
+
 
 **``dado (data)
 próximo (next) → aponta para o próximo nó
@@ -92,6 +101,15 @@ anterior (prev) → aponta para o nó anterior``**
 
 - 1. Stack
 
+```css
+Topo → [20]
+        [15]
+        [7]
+        [3]
+        [5]
+Base →  [10]
+```
+
 a. push(chellenge)
 
 b. pop()
@@ -99,6 +117,11 @@ b. pop()
 c. top()
 
 - 2 Queue
+
+```scss
+[10] → [5] → [15] → [3] → [7] → [20]
+     (início)                  (fim)
+```
 
  a. enqueue (Chellenge) 
  b. dequeue()
@@ -148,6 +171,17 @@ Usa uma função chamada hash para transformar uma chave em um índice
 
 Permite buscas muito rápidas (complexidade O(1), idealmente)
 
+```js
+{
+  "root": 10,
+  "leftOf10": 5,
+  "rightOf10": 15,
+  "leftOf5": 3,
+  "rightOf5": 7,
+  "rightOf15": 20
+}
+```
+
 ```javascript
 const hashTable = {
   nome: "Gleidson",
@@ -165,3 +199,41 @@ Uma função hash:
 E retorna um índice numérico fixo, que indica onde armazenar esse valor no array interno da Hash Table.
 
 Ela é o coração da estrutura, pois define onde os dados serão guardados na memória.
+
+## O que é “Tree” (ou “árvore”).
+Tree é uma estrutura de dados hierárquica, como uma árvore de verdade de cabeça pra baixo:
+
+Começa com um nó raiz (root)
+
+E se ramifica em outros nós (nodes ou “filhos”)
+
+```markdow
+        10         ← raiz (root)
+       /  \
+      5    15      ← filhos (children)
+     / \     \
+    3   7     20   ← netos (subníveis)
+```
+Cada nó pode ter:
+
+Um valor,
+
+Um pai (parent) — exceto a raiz,
+
+E filhos (children).
+
+### **Onde usamos "tree" na prática?**
+
+Árvores binárias (cada nó tem até 2 filhos)
+
+Muito usada em algoritmos, busca e ordenação.
+
+-  DOM (Document Object Model) em HTML/JavaScript é uma árvore!
+
+- A tag <html> é a raiz, e dentro temos <body>, <div>, etc.
+
+- Sistemas de arquivos (pastas e arquivos) também são árvores.
+
+- Banco de dados usa árvores para organizar índices.
+
+- Compiladores e expressões matemáticas (ex: árvore de expressão).
