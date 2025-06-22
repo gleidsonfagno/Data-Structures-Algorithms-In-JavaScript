@@ -237,3 +237,34 @@ Muito usada em algoritmos, busca e ordenação.
 - Banco de dados usa árvores para organizar índices.
 
 - Compiladores e expressões matemáticas (ex: árvore de expressão).
+
+### O que é Recursion (Recursão)?
+Recursão é quando uma função chama a si mesma para resolver um problema em partes menores.
+
+**🌀 Exemplo clássico: Fibonacci**
+
+```javascript
+function fib(n) {
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+
+  return fib(n - 1) + fib(n - 2);
+}
+```
+```python-rpl
+           fib(5)
+         /       \
+     fib(4)     fib(3)
+    /    \      /    \
+ fib(3) fib(2) fib(2) fib(1)
+...
+```
+
+ ## Quando usar recursão:
+Árvores (percurso em profundidade)
+
+Grafos (busca DFS)
+
+Problemas de divisão e conquista (Merge Sort, Quick Sort)
+
+Backtracking (como resolver sudoku, labirintos, etc.)
