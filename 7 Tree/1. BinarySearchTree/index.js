@@ -58,13 +58,32 @@ class BinarySearchTree {
       if (value < temp.value) {
         temp = temp.left;
       } else if (value > temp.value) {
-        temp = temp.right
-      } else if(value === temp.value) {
-        return true
+        temp = temp.right;
+      } else if (value === temp.value) {
+        return true;
       }
     }
 
-    return false
+    return false;
+  }
+  // Breath First Search
+  bfs() {
+    let current = this.root; // começa pela raiz
+    let queue = []; // fila (FIFO): mantém nós a visitar
+    let data = []; // aqui vamos guardar os valores visitados
+
+    queue.push(current); // começa colocando a raiz na fila
+
+    while (queue.length) {
+      // enquanto houver nós na fila...
+      current = queue.shift(); // pega o primeiro da fila
+      data.push(current.value); // salva o valor no resultado
+
+      if (current.left) queue.push(current.left); // põe o filho da ESQUERDA na fila
+      if (current.right) queue.push(current.right); // põe o filho da DIREITA na fila
+    }
+
+    return data; // retorna todos os valores visitados na ordem
   }
 }
 const tree = new BinarySearchTree();
@@ -75,7 +94,8 @@ tree.insert(1);
 tree.insert(7);
 tree.insert(9);
 
-console.log(tree.includes(90))
+// console.log(tree.includes(90));
 
-console.log(tree);
+console.log(tree.bfs())
 
+// console.log(tree);
