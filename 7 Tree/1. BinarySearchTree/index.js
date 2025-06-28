@@ -85,6 +85,17 @@ class BinarySearchTree {
 
     return data; // retorna todos os valores visitados na ordem
   }
+
+  // Depth First Search PreOrder
+  dfsPreOrder(node = this.root, data = []) {
+    if (node === null) return data;
+
+    data.push(node.value);
+
+    if (node.left) this.dfsPreOrder(node.left, data);
+    if (node.right) this.dfsPreOrder(node.right, data);
+    return data;
+  }
 }
 const tree = new BinarySearchTree();
 tree.insert(5);
@@ -96,6 +107,9 @@ tree.insert(9);
 
 // console.log(tree.includes(90));
 
-console.log(tree.bfs())
+// console.log(tree.bfs());
+console.log(tree.dfsPreOrder())
 
 // console.log(tree);
+
+Tree Traversal  Depth First Search PreOrder 
