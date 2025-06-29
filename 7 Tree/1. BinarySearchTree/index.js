@@ -97,7 +97,7 @@ class BinarySearchTree {
     return data;
   }
 
-  // Tree Traversal  Depth First Search PostOrder 
+  // Tree Traversal  Depth First Search PostOrder
   dfsPostOrder(node = this.root, data = []) {
     if (node === null) return data;
 
@@ -110,7 +110,16 @@ class BinarySearchTree {
   }
 
   // dfsInOrder
+  dfsInOrder(node = this.root, data = []) {
+    if (node === null) return data;
 
+    if (node.left) this.dfsInOrder(node.left, data);
+    data.push(node.value);
+
+    if (node.right) this.dfsInOrder(node.right, data);
+
+    return data;
+  }
 }
 
 const tree = new BinarySearchTree();
@@ -122,10 +131,10 @@ tree.insert(1);
 tree.insert(7);
 tree.insert(9);
 
-// console.log(tree.includes(90));
+console.log(tree.includes(90));
 
-// console.log(tree.bfs());
-console.log(tree.dfsPreOrder())
-console.log(tree.dfsPostOrder())
-// console.log(tree);
-
+console.log(tree.bfs());
+console.log(tree.dfsPreOrder());
+console.log(tree.dfsPostOrder());
+console.log(tree.dfsInOrder());
+console.log(tree);
