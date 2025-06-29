@@ -268,3 +268,36 @@ Grafos (busca DFS)
 Problemas de divisão e conquista (Merge Sort, Quick Sort)
 
 Backtracking (como resolver sudoku, labirintos, etc.)
+
+```
+Suponha esta árvore binária:
+        A
+      /   \
+     B     C
+    / \   / \
+   D   E F   G
+```
+
+### Breadth-First Search (BFS) — Busca em largura
+Visita nível por nível da árvore, da esquerda pra direita.
+
+Usa fila (queue).
+
+Ordem de visita:
+A → B → C → D → E → F → G
+
+### PreOrder (DFS) — Raiz → Esquerda → Direita
+Visita a raiz primeiro, depois o lado esquerdo, depois o direito.
+
+Usa recursão ou pilha (stack).
+
+Ordem de visita:
+A → B → D → E → C → F → G
+
+###  PostOrder (DFS) — Esquerda → Direita → Raiz
+Visita as folhas primeiro, depois o nó pai.
+
+Muito usado para deletar árvores, porque visita os filhos antes dos pais.
+
+Ordem de visita:
+D → E → B → F → G → C → A
