@@ -120,6 +120,26 @@ class BinarySearchTree {
 
     return data;
   }
+
+  minValue(node = this.root) {
+    if (node === null) return null;
+
+    while(node.left !== null){
+      node = node.left
+    }
+
+    return node.value;
+  }
+
+  maxValue(node = this.root) {
+    if (node === null) return null;
+
+    while(node.right !== null){
+      node = node.right
+    }
+
+    return node.value;
+  }
 }
 
 const tree = new BinarySearchTree();
@@ -131,10 +151,13 @@ tree.insert(1);
 tree.insert(7);
 tree.insert(9);
 
-console.log(tree.includes(90));
+// console.log(tree.includes(90));
 
-console.log(tree.bfs());
+// console.log(tree.bfs());
 console.log(tree.dfsPreOrder());
 console.log(tree.dfsPostOrder());
 console.log(tree.dfsInOrder());
-console.log(tree);
+// console.log(tree);
+
+console.log(tree.minValue());
+console.log(tree.maxValue())
