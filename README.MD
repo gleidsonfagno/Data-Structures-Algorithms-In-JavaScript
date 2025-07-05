@@ -301,3 +301,52 @@ Muito usado para deletar árvores, porque visita os filhos antes dos pais.
 
 Ordem de visita:
 D → E → B → F → G → C → A
+
+## O que é um Grafo 
+
+Um grafo é uma estrutura de dados usada para representar relações entre objetos. Ele é formado por:
+
+ - Vértices (ou nós): Os elementos ou pontos do grafo.
+
+ - Arestas: As conexões entre os vértices.
+
+Um grafo é um conjunto de vértices conectados por arestas, usado para modelar conexões ou relações entre elementos.
+
+### Tipos de garfos
+
+| English                | Português                   | Description                                           |
+| ---------------------- | --------------------------- | ----------------------------------------------------- |
+| **Undirected Graph**   | Grafo não direcionado       | The edges have no direction (A-B is same as B-A).     |
+| **Directed Graph**     | Grafo direcionado (Digrafo) | The edges have direction (A→B is different from B→A). |
+| **Weighted Graph**     | Grafo ponderado             | Each edge has a weight or cost (like distance, time). |
+| **Unweighted Graph**   | Grafo não ponderado         | Edges do not have weights.                            |
+| **Cyclic Graph**       | Grafo cíclico               | Contains at least one cycle.                          |
+| **Acyclic Graph**      | Grafo acíclico              | Contains no cycles.                                   |
+| **Connected Graph**    | Grafo conexo                | There is a path between every pair of vertices.       |
+| **Disconnected Graph** | Grafo desconexo             | Some vertices cannot be reached from others.          |
+
+###  Aplicações de Grafos
+
+Grafos são usados em várias áreas, como:
+
+ - Redes sociais (Ex: quem segue quem)
+
+ - Mapas e GPS (Rotas entre cidades ou locais)
+
+ - Redes de computadores
+
+ - Sistemas de recomendação
+
+ - Algoritmos de busca (BFS, DFS, Dijkstra, etc.)
+
+```less
+ex:
+
+A --- B
+|     |
+C --- D
+
+Vértices: A, B, C, D
+
+Arestas: A–B, A–C, B–D, C–D
+```
