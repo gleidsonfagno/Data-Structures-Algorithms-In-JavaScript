@@ -260,7 +260,7 @@ function fib(n) {
 ...
 ```
 
- ## Quando usar recursão:
+## Quando usar recursão:
 Árvores (percurso em profundidade)
 
 Grafos (busca DFS)
@@ -350,3 +350,32 @@ Vértices: A, B, C, D
 
 Arestas: A–B, A–C, B–D, C–D
 ```
+
+##  Algoritmos de ordenação e de busca
+
+
+O que são algoritmos de ordenação?
+Algoritmos de ordenação são técnicas para reorganizar elementos em uma ordem específica — geralmente crescente ou decrescente.
+
+São úteis para buscas rápidas, visualizações organizadas e otimizações em grandes volumes de dados.
+
+### Bubble Sort (Ordenação por bolha)
+Complexidade:
+
+Pior caso: O(n²)
+
+Melhor caso (array já ordenado): O(n)
+
+###  Merge Sort (Ordenação por mesclagem)
+Complexidade:
+
+Sempre O(n log n)
+
+### Quick Sort (Ordenação rápida)
+Complexidade:
+
+Pior caso: O(n²)
+
+Médio caso: O(n log n)
+
+###  Insertion sort
